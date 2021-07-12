@@ -7,7 +7,7 @@ import {
   WrapItem
 } from "@chakra-ui/react";
 
-import { UserCard } from "../../organisms/User/UserCard";
+import { UserCard } from "../../organisms/user/UserCard";
 import { useAllUsers } from "../../../hooks/useAllUsers";
 import { UserDetailModal } from "../../organisms/modal/UserDetailModal";
 import { useSelectUser } from "../../../hooks/useSelectUser";
@@ -36,7 +36,7 @@ export const UserManagement: VFC = memo(() => {
         </Center>
       ) : (
         <Wrap p={{ base: 4, md: 10 }}>
-          {users.map((obj) => (
+          {users.map(obj => (
             <WrapItem key={obj.id} mx="auto">
               <UserCard
                 id={obj.id}

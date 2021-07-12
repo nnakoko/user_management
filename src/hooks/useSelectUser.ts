@@ -18,7 +18,7 @@ export const useSelectUser = () => {
 
   const onSelectUser = useCallback((props: Props) => {
     const { id, users, onOpen } = props;
-    const targetUser = users.find((obj) => obj.id === id);
+    const targetUser = users.find(obj => obj.id === id);
     if (!targetUser) {
       showMessage({ title: "ユーザーが見つかりません", status: "error" });
       return;

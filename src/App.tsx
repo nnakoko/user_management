@@ -8,7 +8,7 @@ export default function App() {
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>
-        <Router></Router>
+        <Router />
       </BrowserRouter>
     </ChakraProvider>
   );

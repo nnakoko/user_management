@@ -1,33 +1,34 @@
-import { memo, VFC } from "react";
+import { VFC, memo } from "react";
 import {
+  Button,
   Drawer,
-  DrawerOverlay,
-  DrawerContent,
   DrawerBody,
-  Button
+  DrawerContent,
+  DrawerOverlay
 } from "@chakra-ui/react";
 
 type Props = {
-  onClose: () => void;
   isOpen: boolean;
+  onClose: () => void;
   onClickHome: () => void;
   onClickUserManagement: () => void;
   onClickSetting: () => void;
 };
 
-export const MenuDrawer: VFC<Props> = memo((props) => {
+export const MenuDrawer: VFC<Props> = memo(props => {
   const {
-    onClose,
     isOpen,
+    onClose,
     onClickHome,
     onClickUserManagement,
     onClickSetting
   } = props;
+
   return (
     <Drawer placement="left" size="xs" onClose={onClose} isOpen={isOpen}>
       <DrawerOverlay>
-        <DrawerContent p={0} bg="gray.100">
-          <DrawerBody>
+        <DrawerContent>
+          <DrawerBody as="nav" p={0} bg="gray.100">
             <Button w="100%" onClick={onClickHome}>
               TOP
             </Button>

@@ -23,7 +23,7 @@ type Props = {
   onClose: () => void;
 };
 
-export const UserDetailModal: VFC<Props> = memo((props) => {
+export const UserDetailModal: VFC<Props> = memo(props => {
   const { isOpen, onClose, isAdmin = false, user } = props;
 
   const [username, setUsername] = useState("");

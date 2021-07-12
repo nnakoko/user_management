@@ -9,7 +9,7 @@ type Props = {
   onClick: () => void;
 };
 
-export const PrimaryButton: VFC<Props> = (props) => {
+export const PrimaryButton: VFC<Props> = props => {
   const {
     children,
     isFullWidth = false,
